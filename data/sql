@@ -140,6 +140,33 @@ LOCK TABLES `document` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `file`
+--
+
+DROP TABLE IF EXISTS `file`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `file` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `guid` char(36) DEFAULT NULL,
+  `path` text,
+  `item_table` varchar(256) NOT NULL,
+  `__id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `guid` (`guid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `file`
+--
+
+LOCK TABLES `file` WRITE;
+/*!40000 ALTER TABLE `file` DISABLE KEYS */;
+/*!40000 ALTER TABLE `file` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `migration`
 --
 
@@ -159,7 +186,7 @@ CREATE TABLE `migration` (
 
 LOCK TABLES `migration` WRITE;
 /*!40000 ALTER TABLE `migration` DISABLE KEYS */;
-INSERT INTO `migration` VALUES ('m000000_000000_base',1581422698),('m130524_201442_init',1581422730),('m181212_124233_create_binder_table',1581425228),('m190124_110200_add_verification_token_column_to_user_table',1581422730),('m191212_081015_create_user_table',1581425026),('m200120_095818_create_ip_blacklist_table',1581425026),('m200211_124532_create_table_document',1581425466),('m200211_124756_create_table_section',1581425467);
+INSERT INTO `migration` VALUES ('m000000_000000_base',1581422698),('m130524_201442_init',1581422730),('m181212_124233_create_binder_table',1581425228),('m190124_110200_add_verification_token_column_to_user_table',1581422730),('m191212_081015_create_user_table',1581425026),('m200120_095818_create_ip_blacklist_table',1581425026),('m200211_124532_create_table_document',1581425466),('m200211_124756_create_table_section',1581425467),('m200211_131314_create_table_files',1581427158);
 /*!40000 ALTER TABLE `migration` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -237,4 +264,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-11 16:03:23
+-- Dump completed on 2020-02-11 16:22:48

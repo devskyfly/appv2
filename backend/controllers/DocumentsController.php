@@ -1,12 +1,13 @@
 <?php
 namespace backend\controllers;
 
-use yii\web\Controller;
 use common\models\document\Document;
 use common\models\document\DocumentFilter;
 use common\models\document\Section;
+use devskyfly\yiiModuleAdminPanel\controllers\contentPanel\AbstractContentPanelController;
+use devskyfly\yiiModuleAdminPanel\widgets\contentPanel\ItemSelector;
 
-class DocumentController extends Controller 
+class DocumentsController extends AbstractContentPanelController 
 {
 /**
      * 
@@ -57,10 +58,10 @@ class DocumentController extends Controller
                         "slave_item_cls"=>$item::sectionCls(),
                         "property"=>"_section__id"
                     ])
-                    .$form->field($item,'create_date_time')
-                    .$form->field($item,'change_date_time')
-                    .$form->field($item,'active')
-                        ->checkbox(['value'=>'Y','uncheck'=>'N','checked'=>$item->active=='Y'?true:false])
+                    .$form->field($item, 'create_date_time')
+                    .$form->field($item, 'change_date_time')
+                    .$form->field($item, 'active')
+                        ->checkbox(['value'=>'Y','uncheck'=>'N','checked' => $item->active == 'Y'?true:false])
                 ],
             ];
         };

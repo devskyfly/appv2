@@ -1,7 +1,10 @@
 <?php
 namespace common\models\document;
 
-class DocumentFilter extends Document
+use devskyfly\yiiModuleAdminPanel\models\contentPanel\FilterInterface;
+use devskyfly\yiiModuleAdminPanel\models\contentPanel\FilterTrait;
+
+class DocumentFilter extends Document implements FilterInterface
 {
     use FilterTrait;
     
