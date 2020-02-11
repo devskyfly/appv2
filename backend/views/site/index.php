@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application A';
+$this->title = 'Admin';
 ?>
 <div class="site-index">
 

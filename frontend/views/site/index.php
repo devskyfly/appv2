@@ -2,52 +2,134 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+use frontend\widgets\InfoList;
+use yii\helpers\Html;
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+<div class="raw">
+    <div class="col-xs-12">
+        <div class="">
+        <h2>Притча</h2>
+        <p>Китайская и умная или слайдер</p>
+        </div>
     </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+</div>
+<div class="raw">
+    <div class="col-xs-4">
+        
+            <div class="">
+                <h3 style="color: rgb(51, 122, 183)">Общие положения</h3>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+            
+            <div class=""> 
+                <div class="btn btn-primary" style="width:100%">
+                    <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-list-alt", "style"=>"margin-right:5px"])?>
+                    <?=Html::a("{$span}Устав", ['site/index'], ["style"=>"color: white"]);?>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+        
+            <div class="" style="margin-top:5px">
+                <div class="btn btn-primary " style="width:100%">
+                    <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-tasks", "style"=>"margin-right:5px"])?>
+                    <?=Html::a("{$span}Правила", ['site/index'], ["style"=>"color: white"]);?>
+                </div>
+            </div>
+        
+            <div class="" style="margin-top:5px">
+                <div class="btn btn-primary" style="width:100%">
+                    <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-wrench", "style"=>"margin-right:5px"])?>
+                    <?=Html::a("{$span}Порядок работ", ['site/index'], ["style"=>"color: white"]);?>
+                </div>
+            </div>
+    </div>
+    <div class="col-xs-4">
+        
+        <div> 
+            <h3 style="color: rgb(51, 122, 183)">Общественное</h3>
+        </div>
+        
+        <div class=""> 
+            <div class="btn btn-primary" style="width:100%">
+                <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-list-alt", "style"=>"margin-right:5px"])?>
+                <?=Html::a("{$span}Хозяйственная деятельность", ['site/index'], ["style"=>"color: white"]);?>
             </div>
         </div>
+    
+        <div class="" style="margin-top:5px">
+            <div class="btn btn-primary " style="width:100%">
+                <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-eye-open", "style"=>"margin-right:5px"])?>
+                <?=Html::a("{$span}Ревизионная комиссия", ['site/index'], ["style"=>"color: white"]);?>
+            </div>
+        </div>
+    
+        <div class="" style="margin-top:5px">
+            <div class="btn btn-primary" style="width:100%">
+                <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-comment", "style"=>"margin-right:5px"])?>
+                <?=Html::a("{$span}Общие собрания", ['site/index'], ["style"=>"color: white"]);?>
+            </div>
+        </div>
+</div>
+<div class="col-xs-4">
+    
+        <div class="">
+            <h3 style="color: rgb(51, 122, 183)">Прочее</h3>
+        </div>
+        
+        <div class=""> 
+            <div class="btn btn-primary" style="width:100%">
+                <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-list-alt", "style"=>"margin-right:5px"])?>
+                <?=Html::a("{$span}Реквизиты", ['site/index'], ["style"=>"color: white"]);?>
+            </div>
+        </div>
+    
+        <div class="" style="margin-top:5px">
+            <div class="btn btn-primary " style="width:100%">
+                <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-rub", "style"=>"margin-right:5px"])?>
+                <?=Html::a("{$span}Должники", ['site/index'], ["style"=>"color: white"]);?>
+            </div>
+        </div>
+    
+        <div class="" style="margin-top:5px">
+            <div class="btn btn-primary" style="width:100%">
+                <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-flash", "style"=>"margin-right:5px"])?>
+                <?=Html::a("{$span}Энергосберегающие организации", ['site/index'], ["style"=>"color: white"]);?>
+            </div>
+        </div>
+</div>
+</div>
+<div class="raw">
+<?
+$title = "Новости";
+$route = "news";
+$list = [
+    ["date"=>"2019-10-30", "name"=>"Презентация сайта", "route"=>["news/detail", 'id'=>4]],
+    ["date"=>"2019-10-01", "name"=>"Октябрьская революция", "route"=>["news/detail", 'id'=>3]],
+    ["date"=>"2019-09-08", "name"=>"День выборов", "route"=>["news/detail", 'id'=>2]],
+    ["date"=>"2019-01-01", "name"=>"Новогодние праздники", "route"=>["news/detail", 'id'=>1]]
+];
+?>
+<?=InfoList::widget(compact("title", "route", "list"));?>
 
-    </div>
+<?
+$title = "Документы";
+$route = "docs";
+$list = [
+    ["date"=>"2019-10-30", "name"=>"Приказ об отмене податей", "route"=>["docs/detail", 'id'=>4]],
+    ["date"=>"2019-10-01", "name"=>"Доровог по оказанию услуг клинига", "route"=>["docs/detail", 'id'=>3]],
+    ["date"=>"2019-09-08", "name"=>"Дороговор МосЭнерго", "route"=>["docs/detail", 'id'=>2]],
+    ["date"=>"2019-01-01", "name"=>"Договор аренды", "route"=>["docs/detail", 'id'=>1]]
+];
+?>
+<?=InfoList::widget(compact("title", "route", "list"));?>
+
+<?
+$title = "Отчетность";
+$route = "report";
+$list = [
+    ["date"=>"2019-10-30", "name"=>"Отчет за 4-й квартал 2019", "route"=>["report/detail", 'id'=>4]],
+    ["date"=>"2019-10-01", "name"=>"Отчет за 3-й квартал 2019", "route"=>["report/detail", 'id'=>3]],
+    ["date"=>"2019-09-08", "name"=>"Отчет за 2-й квартал 2019", "route"=>["report/detail", 'id'=>2]],
+    ["date"=>"2019-01-01", "name"=>"Отчет за 1-й квартал 2019", "route"=>["report/detail", 'id'=>1]]
+];
+?>
+<?=InfoList::widget(compact("title", "route", "list"));?>
 </div>
