@@ -4,12 +4,18 @@ return [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    
     'bootstrap' => [
         'admin-panel',
         'auth-security'
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'user' => [
+            'class' => 'yii\web\User',
+            'identityClass' => 'common\models\user\CustomUser',
+            'loginUrl' => ['/site/login']
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

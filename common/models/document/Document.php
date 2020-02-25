@@ -25,7 +25,7 @@ class Document extends AbstractEntity
     {
     	 //Если расширений нет, то можно вернуть пустой массив
         return [
-            'File' => FileExtension::class
+            'file' => FileExtension::class
         ];
     }
     

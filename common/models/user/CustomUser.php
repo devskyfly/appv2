@@ -1,5 +1,5 @@
 <?php 
-namespace app\models\user;
+namespace common\models\user;
 
 use devskyfly\yiiModuleAuthSecurity\models\auth\User;
 

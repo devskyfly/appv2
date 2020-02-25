@@ -7,6 +7,14 @@ use yii\helpers\Html;
 ?>
 <div class="raw">
     <div class="col-xs-12">
+    <div class="alert alert-danger" role="alert">
+        <h2>Объявление</h2>
+        <div>Текст объвления</div>
+    </div>
+    </div>
+</div>
+<div class="raw">
+    <div class="col-xs-12">
         <div class="">
         <h2>Притча</h2>
         <p>Китайская и умная или слайдер</p>
@@ -23,14 +31,14 @@ use yii\helpers\Html;
             <div class=""> 
                 <div class="btn btn-primary" style="width:100%">
                     <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-list-alt", "style"=>"margin-right:5px"])?>
-                    <?=Html::a("{$span}Устав", ['site/index'], ["style"=>"color: white"]);?>
+                    <?=Html::a("{$span}Устав", '/docs/Устав.pdf', ["style"=>"color: white"]);?>
                 </div>
             </div>
         
             <div class="" style="margin-top:5px">
                 <div class="btn btn-primary " style="width:100%">
                     <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-tasks", "style"=>"margin-right:5px"])?>
-                    <?=Html::a("{$span}Правила", ['site/index'], ["style"=>"color: white"]);?>
+                    <?=Html::a("{$span}Правила внутреннего распорядка", '/docs/Правила внутреннего распорядка на территории ГСК Дегунино.docx', ["style"=>"color: white"]);?>
                 </div>
             </div>
         
@@ -44,7 +52,7 @@ use yii\helpers\Html;
     <div class="col-xs-4">
         
         <div> 
-            <h3 style="color: rgb(51, 122, 183)">Общественное</h3>
+            <h3 style="color: rgb(51, 122, 183)">Деятельность ГСК</h3>
         </div>
         
         <div class=""> 
@@ -57,7 +65,7 @@ use yii\helpers\Html;
         <div class="" style="margin-top:5px">
             <div class="btn btn-primary " style="width:100%">
                 <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-eye-open", "style"=>"margin-right:5px"])?>
-                <?=Html::a("{$span}Ревизионная комиссия", ['site/index'], ["style"=>"color: white"]);?>
+                <?=Html::a("{$span}Ревизионная комиссия", '/docs/Ревизионная комиссия.docx', ["style"=>"color: white"]);?>
             </div>
         </div>
     
@@ -91,7 +99,7 @@ use yii\helpers\Html;
         <div class="" style="margin-top:5px">
             <div class="btn btn-primary" style="width:100%">
                 <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-flash", "style"=>"margin-right:5px"])?>
-                <?=Html::a("{$span}Энергосберегающие организации", ['site/index'], ["style"=>"color: white"]);?>
+                <?=Html::a("{$span}Энергоснабжающие организации", ['site/index'], ["style"=>"color: white"]);?>
             </div>
         </div>
 </div>
