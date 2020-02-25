@@ -11,7 +11,7 @@
             "version": "v3.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
+                "url": "git@github.com:twbs/bootstrap.git",
                 "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
             },
             "dist": {
@@ -33,7 +33,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -251,12 +251,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/devskyfly/yii-module-admin-panel.git",
-                "reference": "e4388e78e49146301040c049185fd0f2daf4f310"
+                "reference": "63894594dbb5ec0a44afba1a567a19fb80305823"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devskyfly/yii-module-admin-panel/zipball/e4388e78e49146301040c049185fd0f2daf4f310",
-                "reference": "e4388e78e49146301040c049185fd0f2daf4f310",
+                "url": "https://api.github.com/repos/devskyfly/yii-module-admin-panel/zipball/63894594dbb5ec0a44afba1a567a19fb80305823",
+                "reference": "63894594dbb5ec0a44afba1a567a19fb80305823",
                 "shasum": ""
             },
             "require": {
@@ -288,7 +288,7 @@
                     "email": "devskyfly@gmail.com"
                 }
             ],
-            "time": "2020-02-14T14:23:54+00:00"
+            "time": "2020-02-18T14:17:18+00:00"
         },
         {
             "name": "devskyfly/yii-module-auth-security",

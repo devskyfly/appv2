@@ -1,50 +1,31 @@
 <?php
 namespace backend\controllers;
 
-use common\models\document\Document;
-use common\models\document\DocumentFilter;
-use common\models\document\Section;
+use common\models\news\News;
+use common\models\news\NewsFilter;
+use common\models\news\Section;
 use devskyfly\php56\types\Obj;
 use devskyfly\yiiModuleAdminPanel\controllers\contentPanel\AbstractContentPanelController;
-use devskyfly\yiiModuleAdminPanel\widgets\contentPanel\FileUpload;
 use devskyfly\yiiModuleAdminPanel\widgets\contentPanel\ItemSelector;
 
-class DocumentsController extends AbstractContentPanelController 
+class NewsController extends AbstractContentPanelController 
 {
-/**
-     * 
-     * {@inheritDoc}
-     * @see \devskyfly\yiiModuleAdminPanel\controllers\contentPanel\AbstractContentPanelController::sectionItem()
-     */
     public static function sectionCls()
     {
     	 //Если иерархичность не требуется, то вместо названия класса можно передать null
         return Section::class;
     }
     
-    /**
-     * 
-     * {@inheritDoc}
-     * @see \devskyfly\yiiModuleAdminPanel\controllers\contentPanel\AbstractContentPanelController::entityItem()
-     */
     public static function entityCls()
     {
-        return Document::class;
+        return News::class;
     }
     
-    /**
-     * @return \devskyfly\yiiModuleAdminPanel\models\contentPanel\AbstractItem | null
-     */
     public static function entityFilterCls()
     {
-        return DocumentFilter::class;
+        return NewsFilter::class;
     }
     
-    /**
-     * 
-     * {@inheritDoc}
-     * @see \devskyfly\yiiModuleAdminPanel\controllers\contentPanel\AbstractContentPanelController::entityEditorViews()
-     */
     public function entityEditorViews()
     {
         return function($form,$item)
@@ -64,21 +45,19 @@ class DocumentsController extends AbstractContentPanelController
                     .$form->field($item, 'change_date_time')
                     .$form->field($item, 'active')
                         ->checkbox(['value'=>'Y','uncheck'=>'N','checked' => $item->active == 'Y'?true:false])
-                    .FileUpload::widget([
-                            "form"=>$form,
-                            "item"=>$item,
-                            "attribute"=>'file'
-                        ])
                 ],
+                [
+                    "label" => "seo",
+                    "content" => $form->field($item->extensions['page'], 'title')
+                    .$form->field($item->extensions['page'], 'keywords')
+                    .$form->field($item->extensions['page'], 'description')
+                    .$form->field($item->extensions['page'], 'preview_text')
+                    .$form->field($item->extensions['page'], 'detail_text')->textarea(['rows' => 10])
+                ]
             ];
         };
     }
     
-    /**
-     * 
-     * {@inheritDoc}
-     * @see \devskyfly\yiiModuleAdminPanel\controllers\contentPanel\AbstractContentPanelController::sectionEditorItems()
-     */
     public function sectionEditorViews()
     {
         return function($form,$item)
@@ -105,14 +84,9 @@ class DocumentsController extends AbstractContentPanelController
         };
     }
     
-    /**
-     * 
-     * {@inheritDoc}
-     * @see \devskyfly\yiiModuleAdminPanel\controllers\contentPanel\AbstractContentPanelController::itemLabel()
-     */
     public function itemLabel()
     {
-        return "Документ";
+        return "Новости";
     }
 }
 ?>

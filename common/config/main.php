@@ -23,7 +23,7 @@ return [
     'modules' => [
         'admin-panel'=>[
             'class'=>'devskyfly\yiiModuleAdminPanel\Module',
-            'upload_dir'=>'@app/upload'
+            'upload_dir'=>'@common/upload'
         ],
         'auth-security' => [
             "class" => "devskyfly\yiiModuleAuthSecurity\Module",

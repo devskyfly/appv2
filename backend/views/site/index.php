@@ -14,7 +14,7 @@ $list = [
         'sub_list' => [
             ['name' => 'Пользователи', 'route' => '/user'],
             ['name' => 'Новости', 'route' => '/news'],
-            ['name' => 'Документы', 'route' => '/docs'],
+            ['name' => 'Документы', 'route' => '/documents'],
             ['name' => 'Обращения', 'route' => '/requests'],
             ['name' => 'Предложения', 'route' => '/offers']
         ]

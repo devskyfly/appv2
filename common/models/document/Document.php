@@ -2,9 +2,11 @@
 namespace common\models\document;
 
 use devskyfly\yiiModuleAdminPanel\models\contentPanel\AbstractEntity;
+use yii\helpers\ArrayHelper;
 
 class Document extends AbstractEntity
 {
+    public $file;
     /**
      * 
      * {@inheritDoc}
@@ -37,6 +39,18 @@ class Document extends AbstractEntity
     public static function selectListRoute()
     {
         return "contentPanel/entity-with-section/section-select-list";
+    }
+
+    public function rules()
+    {
+        $rules = parent::rules();
+
+        $new_rules = [
+            [['file'], 'file', 'skipOnEmpty'=>true, 'extensions'=>'jpg, jpeg, pdf, xls, xlsx']
+        ];
+        
+        $rules = ArrayHelper::merge($rules, $new_rules);
+        return $rules;
     }
 
 }
