@@ -3,9 +3,6 @@
     <div class="panel panel-default">
     <!-- Default panel contents -->
     <div class="panel-heading">Правление ГСК «Дегунино»</div>
-    <div class="panel-body">
-        <p>...</p>
-    </div>
 
     <!-- Table -->
     <table class="table">

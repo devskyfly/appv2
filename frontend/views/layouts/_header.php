@@ -8,6 +8,11 @@ use yii\helpers\Url;
 <div class="raw">
     <div class="col-xs-12">
     <?
+    if (Yii::$app->user->identity) {
+        $username = Yii::$app->user->identity->username;
+    } else {
+        $username = "";
+    }
     
     NavBar::begin(['brandLabel' => 'ГСК "Дегунино"']);
     echo Nav::widget([
@@ -27,7 +32,7 @@ use yii\helpers\Url;
                     ['label' => 'Отчетность', 'url' => Url::toRoute(['documents/index'])],
                 ],
             ],
-            ['label' => 'Члены ГСК', 'url' => Url::toRoute(['site/users'])],
+            ['label' => 'Состав ГСК', 'url' => Url::toRoute(['site/users'])],
             [
                 'label' => 'Обратная связь',
                 'items' => [
@@ -45,7 +50,7 @@ use yii\helpers\Url;
                 'visible' => Yii::$app->user->isGuest
             ],
             [
-                'label' => 'Выйти',
+                'label' => 'Выйти '.($username?'('.$username.')':''),
                 'url' => ['site/logout'],
                 'visible' => !Yii::$app->user->isGuest
             ],

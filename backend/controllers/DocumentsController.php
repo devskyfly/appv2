@@ -69,6 +69,7 @@ class DocumentsController extends AbstractContentPanelController
                             "item"=>$item,
                             "attribute"=>'file'
                         ])
+                    .$item['extensions']['file']['guid']
                 ],
             ];
         };

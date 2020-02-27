@@ -16,7 +16,9 @@ use yii\helpers\Url;
     <div>
         <ul class="list-group">
             <?foreach($list as $item):?>
-            <li class="list-group-item"><?=$item['date']?>: <?=Html::a($item['name'],Url::toRoute($route))?></li>
+            <li class="list-group-item">
+                <?=$item['date']?>: <?=Html::a($item['name'], $item['route'])?>
+            </li>
             <?endforeach;?>
         </ul>
     </div>

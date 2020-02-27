@@ -38,7 +38,7 @@ class Document extends AbstractEntity
      */
     public static function selectListRoute()
     {
-        return "contentPanel/entity-with-section/section-select-list";
+        return "/documents/section-select-list";
     }
 
     public function rules()
@@ -46,7 +46,7 @@ class Document extends AbstractEntity
         $rules = parent::rules();
 
         $new_rules = [
-            [['file'], 'file', 'skipOnEmpty'=>true, 'extensions'=>'jpg, jpeg, pdf, xls, xlsx']
+            [['file'], 'file', 'skipOnEmpty'=>true, 'extensions'=>'jpg, jpeg, pdf, xls, xlsx, doc, docx']
         ];
         
         $rules = ArrayHelper::merge($rules, $new_rules);

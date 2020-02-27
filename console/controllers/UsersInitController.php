@@ -18,11 +18,11 @@ class UsersInitController extends Controller
         $generator = new ComputerPasswordGenerator();
 
         $generator
-        ->setUppercase()
+        //->setUppercase()
         ->setLowercase()
         ->setNumbers()
         ->setSymbols(false)
-        ->setLength(12);
+        ->setLength(5);
         
         $data = [
             ["file" => "1_1-2.xls", "range" => [5, 114]],

@@ -26,7 +26,7 @@ class News extends AbstractEntity
     
     public static function selectListRoute()
     {
-        return "module/entity-name/section-select-list";
+        return "/news/section-select-list";
     }
 }
 ?>
