@@ -33,14 +33,15 @@ use yii\helpers\Url;
             <div class=""> 
                 <div class="btn btn-primary" style="width:100%">
                     <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-list-alt", "style"=>"margin-right:5px"])?>
-                    <?=Html::a("{$span}Устав", '/docs/Устав.pdf', ["style"=>"color: white"]);?>
+                    <?=Html::a("{$span}Устав", Url::toRoute(['/download/index', 'guid'=>'2a49687c-c1f4-4c70-9336-12892b039e89']), ["style"=>"color: white"]);?>
                 </div>
             </div>
         
             <div class="" style="margin-top:5px">
                 <div class="btn btn-primary " style="width:100%">
                     <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-tasks", "style"=>"margin-right:5px"])?>
-                    <?=Html::a("{$span}Правила внутреннего распорядка", Url::toRoute(['/download/index', 'guid'=>'c48d8b7f-b1ad-4cd3-abec-001d16972a51']), ["style"=>"color: white"]);?>
+                    <?=Html::a("{$span}Правила внутреннего распорядка", 
+                    Url::toRoute(['/download/index', 'guid'=>'c48d8b7f-b1ad-4cd3-abec-001d16972a51']), ["style"=>"color: white"]);?>
                 </div>
             </div>
         
@@ -74,7 +75,7 @@ use yii\helpers\Url;
         <div class="" style="margin-top:5px">
             <div class="btn btn-primary" style="width:100%">
                 <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-comment", "style"=>"margin-right:5px"])?>
-                <?=Html::a("{$span}Общие собрания", ['site/index'], ["style"=>"color: white"]);?>
+                <?=Html::a("{$span}Общие собрания", Url::toRoute(['/documents/index', 'section' => 6]), ["style"=>"color: white"]);?>
             </div>
         </div>
 </div>
@@ -87,21 +88,21 @@ use yii\helpers\Url;
         <div class=""> 
             <div class="btn btn-primary" style="width:100%">
                 <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-list-alt", "style"=>"margin-right:5px"])?>
-                <?=Html::a("{$span}Банковские реквизиты", ['site/index'], ["style"=>"color: white"]);?>
+                <?=Html::a("{$span}Банковские реквизиты", Url::toRoute(['/download/index', 'guid'=>'3d39ba11-15b4-4496-a32a-eee2a91efbd4']), ["style"=>"color: white"]);?>
             </div>
         </div>
     
         <div class="" style="margin-top:5px">
             <div class="btn btn-primary " style="width:100%">
                 <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-rub", "style"=>"margin-right:5px"])?>
-                <?=Html::a("{$span}Платежный баланс", ['site/index'], ["style"=>"color: white"]);?>
+                <?=Html::a("{$span}Платежный баланс", Url::toRoute(['/download/index', 'guid'=>'e269335c-47fb-4c5e-9e89-67e9bef47ab1']), ["style"=>"color: white"]);?>
             </div>
         </div>
     
         <div class="" style="margin-top:5px">
             <div class="btn btn-primary" style="width:100%">
                 <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-flash", "style"=>"margin-right:5px"])?>
-                <?=Html::a("{$span}Договора с контрагентами", ['site/index'], ["style"=>"color: white"]);?>
+                <?=Html::a("{$span}Договора с контрагентами", Url::toRoute(['/documents/index', 'section' => 2]), ["style"=>"color: white"]);?>
             </div>
         </div>
 </div>
