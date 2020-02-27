@@ -1,6 +1,9 @@
 
 <div class="raw">
     <div class="col-xs-12">
+        <h3><?=$label?></h3>
+    </div>
+    <div class="col-xs-12">
     <table class="table table-striped">
             <tbody>
                 <tr>

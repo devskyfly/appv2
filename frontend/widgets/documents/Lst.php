@@ -3,6 +3,7 @@ namespace frontend\widgets\documents;
 
 use DateTime;
 use common\models\document\Document;
+use common\models\news\Section;
 use yii\base\Widget;
 use yii\helpers\Url;
 
@@ -25,6 +26,7 @@ class Lst extends Widget
     public function run()
     {
         $list = $this->list;
-        return $this->render('list', compact("list"));
+        $label = (Section::getById($this->section))->name;
+        return $this->render('list', compact("list", "label"));
     }
 }

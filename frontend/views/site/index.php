@@ -24,7 +24,7 @@ use yii\helpers\Url;
     </div>
 </div>
 <div class="raw">
-    <div class="col-xs-4">
+    <div class="col-xs-12 col-md-4">
         
             <div class="">
                 <h3 style="color: rgb(51, 122, 183)">Общие положения</h3>
@@ -52,7 +52,7 @@ use yii\helpers\Url;
                 </div>
             </div>
     </div>
-    <div class="col-xs-4">
+    <div class="col-xs-12 col-md-4">
         
         <div> 
             <h3 style="color: rgb(51, 122, 183)">Деятельность ГСК</h3>
@@ -79,7 +79,7 @@ use yii\helpers\Url;
             </div>
         </div>
 </div>
-<div class="col-xs-4">
+<div class="col-xs-12 col-md-4">
     
         <div class="">
             <h3 style="color: rgb(51, 122, 183)">Бухгалтерия</h3>
