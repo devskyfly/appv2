@@ -20,6 +20,6 @@ class Section extends AbstractSection
    
     public static function selectListRoute()
     {
-        return "news/entity-with-section/section-select-list";
+        return "news/section-select-list";
     }
 }

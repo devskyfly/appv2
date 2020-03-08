@@ -11,13 +11,24 @@ class ServiceController extends Controller
     {
         $exclude = ['user_info', 'user', 'auth_security_user', 'migration'];
         $db = Yii::$app->db;
-        $schema = $db->getSchema();
+        /*$schema = $db->getSchema();
         $tables = $schema->getTableNames();
         foreach ($tables as $table) {
             if ($table != in_array($table, $exclude)) {
                 BaseConsole::stdout($table.PHP_EOL);
                 $db->createCommand()->truncateTable($table)->execute();
             }
+        }*/
+    }
+
+    public function actionClearUsers()
+    {
+        $users = ['user_info', 'user'];
+        $db = Yii::$app->db;
+        
+        foreach ($users as $table) { 
+            BaseConsole::stdout($table.PHP_EOL);
+            $db->createCommand()->truncateTable($table)->execute();
         }
     }
 }

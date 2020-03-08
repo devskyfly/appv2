@@ -48,8 +48,8 @@ class UsersInitController extends Controller
 
                 $i++;
                 
-                $nmb = $row[0];
-                $name = $row[1];
+                $nmb = trim($row[0]);
+                $name = trim($row[1]);
                 
                 if (($i >= $item['range'][0]) && ($i <= $item['range'][1])) {
                     $j++;

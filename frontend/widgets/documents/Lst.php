@@ -3,7 +3,7 @@ namespace frontend\widgets\documents;
 
 use DateTime;
 use common\models\document\Document;
-use common\models\news\Section;
+use common\models\document\Section;
 use yii\base\Widget;
 use yii\helpers\Url;
 

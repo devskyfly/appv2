@@ -1,8 +1,11 @@
+<?php
+use frontend\widgets\documents\Lst;
+?>
 <div class="row">
     <div class="col-xs-12">
     <div class="panel panel-default">
     <!-- Default panel contents -->
-    <div class="panel-heading">Правление ГСК «Дегунино»</div>
+    <div class="panel-heading">Ревизионная комиссия</div>
 
     <!-- Table -->
     <table class="table">
@@ -26,3 +29,5 @@
     </div>
     </div>
 </div>
+
+<?=Lst::widget(['section' => $section])?>

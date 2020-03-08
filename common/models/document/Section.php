@@ -36,6 +36,6 @@ class Section extends AbstractSection
      */
     public static function selectListRoute()
     {
-        return "documents/entity-with-section/section-select-list";
+        return "documents/section-select-list";
     }
 }

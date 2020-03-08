@@ -1,6 +1,6 @@
 <?php
 ?>
-
+<?if (false): ?>
 <div class="row">
     <div class="col-xs-1 ">
     
@@ -9,3 +9,4 @@
     <span>ГСК Дегунино <?=(new \DateTime())->format("Y")?> г.</span>
     </div>
 </div>
+<? endif; ?>

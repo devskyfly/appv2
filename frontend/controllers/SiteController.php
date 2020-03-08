@@ -1,21 +1,12 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\document\Section;
 use Yii;
-use frontend\models\ResendVerificationEmailForm;
-use frontend\models\VerifyEmailForm;
-use yii\base\InvalidArgumentException;
-use yii\web\BadRequestHttpException;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
-use common\models\LoginForm;
 use devskyfly\yiiModuleAuthSecurity\actions\LoginAction;
 use devskyfly\yiiModuleAuthSecurity\actions\LogoutAction;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
-use frontend\models\ContactForm;
+
 use yii\web\ErrorAction;
 
 /**
@@ -76,10 +67,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $this->view->title = "ГСК Дегунино";
         return $this->render('index');
     }
-
-    
 
     /**
      * Displays about page.
@@ -91,5 +81,28 @@ class SiteController extends Controller
         return $this->render('users');
     }
 
-    
+    public function actionRevision()
+    {
+        $this->view->title = 'Ревизионная комиссия';
+
+        $section = Section::find()->where(['active' => 'Y', 'id' => 5])->one();
+        if (is_null($section)) {
+            throw new NotFoundHttpException();
+        }
+        $this->view->title = $section->name;
+
+        return $this->render('revision',['section' => $section->id]);
+    }
+
+    public function actionWorktime()
+    {
+        $this->view->title = 'Режим работы';
+        return $this->render('worktime',[]);
+    }
+
+    public function actionContacts()
+    {
+        $this->view->title = 'Контакты';
+        return $this->render('contacts',[]);
+    }
 }

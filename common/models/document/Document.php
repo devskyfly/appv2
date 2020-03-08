@@ -46,7 +46,7 @@ class Document extends AbstractEntity
         $rules = parent::rules();
 
         $new_rules = [
-            [['file'], 'file', 'skipOnEmpty'=>true, 'extensions'=>'jpg, jpeg, pdf, xls, xlsx, doc, docx']
+            [['file'], 'file', 'skipOnEmpty'=>true, 'extensions'=>'jpg, jpeg, pdf, xls, xlsx, doc, docx, zip, rar']
         ];
         
         $rules = ArrayHelper::merge($rules, $new_rules);
