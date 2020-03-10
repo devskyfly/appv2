@@ -2,11 +2,14 @@
 namespace frontend\controllers;
 
 use common\models\document\Section;
+use common\models\offer\Offer;
 use Yii;
 use yii\web\Controller;
 use devskyfly\yiiModuleAuthSecurity\actions\LoginAction;
 use devskyfly\yiiModuleAuthSecurity\actions\LogoutAction;
-use frontend\models\Order;
+use frontend\models\UserRequest;
+use common\models\order\Order;
+use yii\helpers\Html;
 use yii\web\ErrorAction;
 
 /**
@@ -109,20 +112,38 @@ class SiteController extends Controller
     public function actionOrder()
     {
         $this->view->title = 'Заявления';
-        $model = new Order();
+        $model = new UserRequest();
 
         if ($model->load(Yii::$app->request->post()) 
             && $model->validate()) {
-        } else {
-
+            $order = new Order();
+            $order->active = 'N';
+            $order->user = Yii::$app->user->id;
+            $order->txt = Html::encode($model->content);
+            $order->saveLikeItem();
+            return $this->render('user-answer', ['type' => 'order']);
         }
         
-        return $this->render('order',['model' => $model]);
+        return $this->render('user-request-form',['model' => $model, 'type' => 'order']);
     }
+
 
     public function actionOffer()
     {
         $this->view->title = 'Предложения';
-        return $this->render('order',[]);
+
+        $model = new UserRequest();
+
+        if ($model->load(Yii::$app->request->post()) 
+            && $model->validate()) {
+            $order = new Offer();
+            $order->active = 'N';
+            $order->user = Yii::$app->user->id;
+            $order->txt = Html::encode($model->content);
+            $order->saveLikeItem();
+            return $this->render('user-answer', ['type' => 'offer']);
+        }
+        
+        return $this->render('user-request-form',['model' => $model, 'type' => 'offer']);
     }
 }

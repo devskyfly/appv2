@@ -3,7 +3,7 @@ namespace frontend\models;
 
 use yii\base\Model;
 
-class Order extends Model
+class UserRequest extends Model
 { 
     public $content;
 
