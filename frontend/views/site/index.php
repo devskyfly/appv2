@@ -22,15 +22,15 @@ use yii\helpers\Url;
             <div class="panel panel-default">
                 <!-- Default panel contents -->
                 <div class="panel-heading">
-                    <h3>2020-03-14 состоится общее собрание:</h3>
+                    <h3>Общее собрание 2020-03-14:</h3>
                 </div>
                 <!--<div class="panel-body">
                     <p>На повестке:</p>
                 </div>-->
                 <ul class="list-group">
-                    <li class="list-group-item">Смета</li>
-                    <li class="list-group-item">Снос</li>
-                    <li class="list-group-item">Должники</li>
+                    <li class="list-group-item"><span class="glyphicon glyphicon-flash"></span>Смета</li>
+                    <li class="list-group-item"><span class="glyphicon glyphicon-flash"></span>Снос</li>
+                    <li class="list-group-item"><span class="glyphicon glyphicon-flash"></span>Должники</li>
                 </ul>
             </div>
         </div>

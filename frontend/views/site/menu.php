@@ -119,6 +119,13 @@ use yii\helpers\Url;
         
         <div class="" style="margin-top:5px">
             <div class="btn btn-primary " style="width:100%">
+                <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-alert", "style"=>"margin-right:5px"])?>
+                <?=Html::a("{$span}Ревизия бухгалтерии", Url::toRoute(['/download/index', 'guid'=>'3a013429-9d50-409d-82c6-d974a8d50a05']), ["style"=>"color: white"]);?>
+            </div>
+        </div>
+
+        <div class="" style="margin-top:5px">
+            <div class="btn btn-primary " style="width:100%">
                 <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-rub", "style"=>"margin-right:5px"])?>
                 <?=Html::a("{$span}Платежный баланс", Url::toRoute(['/download/index', 'guid'=>'e269335c-47fb-4c5e-9e89-67e9bef47ab1']), ["style"=>"color: white"]);?>
             </div>

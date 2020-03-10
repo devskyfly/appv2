@@ -6,7 +6,7 @@ use Yii;
 use yii\web\Controller;
 use devskyfly\yiiModuleAuthSecurity\actions\LoginAction;
 use devskyfly\yiiModuleAuthSecurity\actions\LogoutAction;
-
+use frontend\models\Order;
 use yii\web\ErrorAction;
 
 /**
@@ -104,5 +104,25 @@ class SiteController extends Controller
     {
         $this->view->title = 'Контакты';
         return $this->render('contacts',[]);
+    }
+
+    public function actionOrder()
+    {
+        $this->view->title = 'Заявления';
+        $model = new Order();
+
+        if ($model->load(Yii::$app->request->post()) 
+            && $model->validate()) {
+        } else {
+
+        }
+        
+        return $this->render('order',['model' => $model]);
+    }
+
+    public function actionOffer()
+    {
+        $this->view->title = 'Предложения';
+        return $this->render('order',[]);
     }
 }

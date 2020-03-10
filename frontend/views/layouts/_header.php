@@ -34,8 +34,8 @@ $nav_items = [];
     $nav_items[] =[
         'label' => 'Обратная связь',
         'items' => [
-            ['label' => 'Заявление', 'url' => '#'],                   
-            ['label' => 'Предложение', 'url' => '#']
+            ['label' => 'Заявление', 'url' => Url::toRoute(['/site/order'])],                   
+            ['label' => 'Предложение', 'url' => Url::toRoute(['/site/offer'])]
         ],
     ];
 if (Yii::$app->user->isGuest) {
