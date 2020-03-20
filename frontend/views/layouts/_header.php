@@ -21,16 +21,7 @@ $nav_items = [];
     $nav_items[] = [
         'label' => 'Контакты',
         'url' => Url::toRoute(['/site/contacts'])
-    ];
-    $nav_items[] =
-    [
-        'label' => 'Письма',
-        'items' => [
-            ['label' => 'Входящие', 'url' => Url::toRoute(['/documents/index', 'section' => 11])],
-            ['label' => 'Исходящие', 'url' => Url::toRoute(['/documents/index', 'section' => 12])]
-        ],
-    ];
-    
+    ];   
     $nav_items[] =[
         'label' => 'Обратная связь',
         'items' => [

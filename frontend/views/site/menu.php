@@ -68,7 +68,21 @@ use yii\helpers\Url;
         <div> 
             <h3 style="color: rgb(51, 122, 183)">Деятельность ГСК</h3>
         </div>
-        
+
+        <div class="" style="margin-top:5px">
+            <div class="btn btn-primary " style="width:100%">
+                <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-download", "style"=>"margin-right:5px"])?>
+                <?=Html::a("{$span}Входящие письма", Url::toRoute(['/documents/index', 'section' => 11]), ["style"=>"color: white"]);?>
+            </div>
+        </div>
+
+        <div class="" style="margin-top:5px">
+            <div class="btn btn-primary " style="width:100%">
+                <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-upload", "style"=>"margin-right:5px"])?>
+                <?=Html::a("{$span}Исходящие письма", Url::toRoute(['/documents/index', 'section' => 12]), ["style"=>"color: white"]);?>
+            </div>
+        </div>
+
         <div class="" style="margin-top:5px">
             <div class="btn btn-primary " style="width:100%">
                 <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-rub", "style"=>"margin-right:5px"])?>
@@ -127,7 +141,14 @@ use yii\helpers\Url;
         <div class="" style="margin-top:5px">
             <div class="btn btn-primary " style="width:100%">
                 <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-rub", "style"=>"margin-right:5px"])?>
-                <?=Html::a("{$span}Платежный баланс", Url::toRoute(['/download/index', 'guid'=>'e269335c-47fb-4c5e-9e89-67e9bef47ab1']), ["style"=>"color: white"]);?>
+                <?=Html::a("{$span}Платежи", Url::toRoute(['/download/index', 'guid'=>'e269335c-47fb-4c5e-9e89-67e9bef47ab1']), ["style"=>"color: white"]);?>
+            </div>
+        </div>
+
+        <div class="" style="margin-top:5px">
+            <div class="btn btn-primary " style="width:100%">
+                <?$span = Html::tag('span','',["class" => "glyphicon glyphicon-user", "style"=>"margin-right:5px"])?>
+                <?=Html::a("{$span}Должники", Url::toRoute(['#']), ["style"=>"color: white"]);?>
             </div>
         </div>
         

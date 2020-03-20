@@ -27,7 +27,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
     <?= $this->render('_header')?>
-    <div class = "container" style="min-height: calc(100vh - 80px);">
+    <div class = "container" style='min-height: calc(100vh - 80px);background-image: url("/img/background.jpg");'>
     <?= $content ?>
     </div>
     <?= $this->render('_footer')?>
