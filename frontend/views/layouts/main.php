@@ -23,11 +23,11 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body>
+<body style='background-image: url("/img/background.jpg?v1"); background-repeat: no-repeat; background-size: 100% 100%;'>
 <?php $this->beginBody() ?>
 
     <?= $this->render('_header')?>
-    <div class = "container" style='min-height: calc(100vh - 80px);background-image: url("/img/background.jpg");'>
+    <div class = "container" style='min-height: calc(100vh - 80px);'>
     <?= $content ?>
     </div>
     <?= $this->render('_footer')?>
