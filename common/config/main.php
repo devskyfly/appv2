@@ -14,7 +14,8 @@ return [
         'user' => [
             'class' => 'yii\web\User',
             'identityClass' => 'common\models\user\CustomUser',
-            'loginUrl' => ['/site/login']
+            'loginUrl' => ['/site/login'],
+            'authTimeout' => 3600*24*365
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',

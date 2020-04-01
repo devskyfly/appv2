@@ -23,7 +23,21 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body style='background-image: url("/img/background.jpg?v1"); background-repeat: no-repeat; background-size: 100% 100%;'>
+<?
+$controller = Yii::$app->controller;
+$contrId = $controller->id;
+$actionId = $controller->action->id;
+if($contrId == "site" && $actionId == "index"){
+    $background = true;
+} else {
+    $background = false;
+}
+?>
+<?if($background):?>
+    <body style='background-image: url("/img/background.jpg?v1"); background-repeat: no-repeat; background-size: 100% 100%;'>
+<?else:?>
+    <body>
+<?endif?>
 <?php $this->beginBody() ?>
 
     <?= $this->render('_header')?>
