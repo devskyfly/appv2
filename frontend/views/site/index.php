@@ -2,26 +2,27 @@
 
 /* @var $this yii\web\View */
 
-use frontend\widgets\InfoList;
-use yii\helpers\Html;
+
 use yii\helpers\Url;
 
 ?>
 
 <div class="raw">
-    <div class="col-xs-12">
-        <div class="well" role="alert">
-            <div class="panel panel-default">
-                <!-- Default panel contents -->
-                <div class="panel-heading">
-                    <h3>Общее собрание 2020-03-14</h3>
-                </div>
-                <div class="panel-body">
-                    <p>Тема общего собрания</p>
-                </div>
-                <ul class="list-group">
-                    <li class="list-group-item"><span class="glyphicon glyphicon-flash"></span>Снос</li>
-                </ul>
+    <div class="col-xs-12  col-md-6">
+        <div class="well">
+            <div style="background-color: white;padding: 20px;">
+                <a href = "<?=Url::toRoute(["/article/sobraniye"])?>" style="color: gray; text-decoration: underline;">
+                    <h3 style="text-align: center;">Общее собрание 2020-03-14</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12  col-md-6">
+        <div class="well">
+            <div style="background-color: white;padding: 20px;">
+                <a href = "<?=Url::toRoute(["/article/snos"])?>" style="color: gray; text-decoration: underline;">
+                    <h3 style="text-align: center;">Снос</h3>
+                </a>
             </div>
         </div>
     </div>
