@@ -65,7 +65,7 @@ class SiteController extends Controller
                          // allow authenticated users
                         [
                             'allow' => true,
-                            'roles' => ['@'],
+                            'roles' => ['?'],
                         ],
                         // всё остальное по умолчанию запрещено
                     ],
@@ -109,7 +109,7 @@ class SiteController extends Controller
      */
     public function actionUsers()
     {
-        return $this->render('index');
+        return $this->render('users');
     }
 
     public function actionRevision()
