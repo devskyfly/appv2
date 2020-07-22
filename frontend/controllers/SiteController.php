@@ -9,6 +9,7 @@ use devskyfly\yiiModuleAuthSecurity\actions\LoginAction;
 use devskyfly\yiiModuleAuthSecurity\actions\LogoutAction;
 use frontend\models\UserRequest;
 use common\models\order\Order;
+use yii\filters\AccessControl;
 use yii\helpers\Html;
 use yii\web\ErrorAction;
 
@@ -48,6 +49,33 @@ class SiteController extends Controller
         ];
     }*/
 
+    public function behaviors()
+    {
+        //if (YII_ENV_PROD) {
+            return [
+                'access' => [
+                    'class' => AccessControl::className(),
+                    'rules' => [
+                        // разрешаем аутентифицированным пользователям
+                        [
+                            'actions' => ['users'],
+                            'allow' => false,
+                            'roles' => ['?'],
+                        ],
+                         // allow authenticated users
+                        [
+                            'allow' => true,
+                            'roles' => ['@'],
+                        ],
+                        // всё остальное по умолчанию запрещено
+                    ],
+                ],
+            ];
+        // }   else {
+        //     return false;
+        // }
+    }
+
     public function actions()
 {
 	return [
@@ -81,7 +109,7 @@ class SiteController extends Controller
      */
     public function actionUsers()
     {
-        return $this->render('users');
+        return $this->render('index');
     }
 
     public function actionRevision()
