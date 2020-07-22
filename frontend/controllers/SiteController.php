@@ -57,15 +57,17 @@ class SiteController extends Controller
                     'class' => AccessControl::className(),
                     'rules' => [
                         // разрешаем аутентифицированным пользователям
-                        [
-                            'actions' => ['users'],
-                            'allow' => false,
-                            'roles' => ['?'],
-                        ],
                          // allow authenticated users
                         [
+                            'actions' => ['index', 'error', 'login'],
                             'allow' => true,
                             'roles' => ['?'],
+                        ],
+                        
+                        [
+                            //'actions' => ['index', 'error', 'login'],
+                            'allow' => true,
+                            'roles' => ['@'],
                         ],
                         // всё остальное по умолчанию запрещено
                     ],
